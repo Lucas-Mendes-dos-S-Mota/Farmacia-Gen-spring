@@ -37,7 +37,7 @@ public class Produto {
 
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
-	public Categoria categoria;
+	private Categoria categoria;
 	
 	
 
