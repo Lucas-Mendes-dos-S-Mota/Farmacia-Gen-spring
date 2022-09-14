@@ -27,7 +27,7 @@ import com.lojaGengames.repository.CategoriasRepository;
 @RequestMapping("/categorias")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CategoriasController {
-	
+	 
 	 @Autowired
 	    private CategoriasRepository repositoty;
 	    
@@ -44,7 +44,7 @@ public class CategoriasController {
 	    }
 	    
 	    @GetMapping("/descricao/{descricao}")
-	    public ResponseEntity<List<Categorias>> getByTitle(@PathVariable 
+	    public ResponseEntity<List<Categorias>> getBydescricao(@PathVariable 
 	    String descricao){
 	        return ResponseEntity.ok(repositoty
 	            .findAllByDescricaoContainingIgnoreCase(descricao));
